@@ -26,6 +26,9 @@ read.question('Digite o nome do projeto: ',(folderName)=>{
                 return
             }
         })
+        fs.mkdirSync('models')
+        process.chdir(atualPath + '/' + folderName)
+        fs.mkdirSync('controllers')
         console.log('Projeto criado')
         read.close()
     }catch(error){
